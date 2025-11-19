@@ -21,7 +21,7 @@
 
     /* HEADER */
     header {
-      background: #000;
+      background: #1a1a2e;
       padding: 25px 50px;
       display: flex;
       justify-content: space-between;
@@ -29,11 +29,30 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    header img {
-      height: 50px;
-      filter: brightness(0) invert(1);
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      color: #ff6b6b;
     }
 
     .menu {
@@ -46,65 +65,98 @@
       color: #fff;
       text-decoration: none;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
+      transition: 0.3s;
     }
 
     .menu a:hover {
-      color: #00d4ff;
+      color: #ff6b6b;
     }
 
     .apply-header {
-      background: #00d4ff;
-      color: #000;
+      background: #ff6b6b;
+      color: #fff;
       padding: 12px 30px;
       text-decoration: none;
       font-weight: 700;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border-radius: 0;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
     .apply-header:hover {
-      background: #fff;
+      background: #ff5252;
+      transform: translateY(-2px);
     }
 
     /* HERO */
     .hero {
-      height: 100vh;
+      min-height: 90vh;
       background: 
-        linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
-        url('bandera.jpg') center/cover no-repeat;
+        linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+        url('bandera.jpg') center/cover no-repeat fixed;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: #fff;
-      padding: 20px;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      top: -200px;
+      right: -100px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      bottom: -150px;
+      left: -100px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
     }
 
     .hero-content h1 {
-      font-size: 70px;
+      font-size: 65px;
       font-weight: 900;
-      margin-bottom: 20px;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: -2px;
+      margin-bottom: 25px;
+      line-height: 1.1;
+    }
+
+    .hero-content h1 span {
+      color: #ffd93d;
     }
 
     .hero-content p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      font-weight: 300;
-      opacity: 0.9;
+      font-size: 22px;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      line-height: 1.6;
     }
 
     .hero-btn {
-      background: #00d4ff;
+      background: #ffd93d;
       color: #000;
       padding: 20px 50px;
       text-decoration: none;
@@ -113,6 +165,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       display: inline-block;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
@@ -123,8 +176,8 @@
 
     /* STATS */
     .stats {
-      background: #000;
-      padding: 60px 50px;
+      background: #1a1a2e;
+      padding: 80px 50px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 50px;
@@ -132,70 +185,81 @@
     }
 
     .stat-box h2 {
-      font-size: 60px;
-      color: #00d4ff;
+      font-size: 70px;
+      color: #ff6b6b;
       font-weight: 900;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .stat-box p {
       color: #fff;
-      font-size: 14px;
+      font-size: 16px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    /* INFO SECTION */
-    .info {
+    /* SECTION */
+    .section {
       padding: 100px 50px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .info h2 {
+    .section h2 {
       font-size: 50px;
       font-weight: 900;
       margin-bottom: 30px;
-      text-transform: uppercase;
+      text-align: center;
     }
 
-    .info p {
+    .section p {
       font-size: 18px;
       line-height: 1.8;
-      color: #333;
-      margin-bottom: 40px;
+      color: #555;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
     }
 
-    /* GRID CARDS */
+    /* CARDS */
     .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      padding: 100px 50px;
-      max-width: 1200px;
-      margin: 0 auto;
-      background: #f5f5f5;
+      margin-top: 60px;
     }
 
     .card {
-      background: #fff;
-      padding: 50px;
-      border-left: 5px solid #00d4ff;
+      background: #f8f9fa;
+      padding: 40px;
+      border-radius: 10px;
+      transition: 0.3s;
+      border-top: 4px solid #667eea;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
     }
 
     .card h3 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 900;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
     .card p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.7;
-      color: #555;
+      color: #666;
       margin-bottom: 20px;
+      text-align: left;
     }
 
     .card ul {
@@ -203,40 +267,42 @@
     }
 
     .card ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-      font-size: 15px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #555;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .card ul li:before {
-      content: "▸ ";
-      color: #00d4ff;
+      content: "✓ ";
+      color: #667eea;
       font-weight: bold;
-      margin-right: 10px;
+      margin-right: 8px;
     }
 
-    /* CTA BANNER */
-    .cta-banner {
-      background: #00d4ff;
-      padding: 80px 50px;
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      padding: 100px 50px;
       text-align: center;
+      color: #fff;
     }
 
-    .cta-banner h2 {
-      font-size: 50px;
+    .cta h2 {
+      font-size: 55px;
       font-weight: 900;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      margin-bottom: 25px;
     }
 
-    .cta-banner p {
+    .cta p {
       font-size: 20px;
       margin-bottom: 40px;
+      opacity: 0.95;
     }
 
     .cta-btn {
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #f5576c;
       padding: 20px 50px;
       text-decoration: none;
       font-weight: 700;
@@ -244,51 +310,61 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       display: inline-block;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
     .cta-btn:hover {
-      background: #333;
+      background: #ffd93d;
+      color: #000;
       transform: scale(1.05);
     }
 
     /* STEPS */
     .steps {
+      background: #f8f9fa;
       padding: 100px 50px;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     .steps h2 {
       font-size: 50px;
       font-weight: 900;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       text-align: center;
-      text-transform: uppercase;
     }
 
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .step {
       text-align: center;
-      padding: 30px;
-      background: #f9f9f9;
-      border-top: 5px solid #00d4ff;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
     .step-num {
-      font-size: 60px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      font-size: 40px;
       font-weight: 900;
-      color: #00d4ff;
-      margin-bottom: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
     }
 
     .step h3 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 900;
       margin-bottom: 15px;
       text-transform: uppercase;
@@ -297,12 +373,12 @@
     .step p {
       font-size: 15px;
       line-height: 1.6;
-      color: #555;
+      color: #666;
     }
 
     /* FOOTER */
     footer {
-      background: #000;
+      background: #1a1a2e;
       color: #fff;
       padding: 80px 50px 40px;
     }
@@ -315,14 +391,27 @@
       margin: 0 auto 60px;
     }
 
-    .footer-logo img {
-      height: 50px;
+    .footer-brand h3 {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 28px;
+      font-weight: 900;
       margin-bottom: 20px;
+    }
+
+    .footer-brand img {
+      height: 40px;
+      width: auto;
       filter: brightness(0) invert(1);
     }
 
-    .footer-logo p {
-      color: #999;
+    .footer-brand span {
+      color: #ff6b6b;
+    }
+
+    .footer-brand p {
+      color: #aaa;
       font-size: 14px;
       line-height: 1.7;
     }
@@ -333,12 +422,12 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #00d4ff;
+      color: #ff6b6b;
     }
 
     .footer-col a {
       display: block;
-      color: #999;
+      color: #aaa;
       text-decoration: none;
       margin-bottom: 12px;
       font-size: 14px;
@@ -346,15 +435,15 @@
     }
 
     .footer-col a:hover {
-      color: #00d4ff;
+      color: #ff6b6b;
       padding-left: 5px;
     }
 
     .footer-bottom {
       text-align: center;
       padding-top: 40px;
-      border-top: 1px solid #222;
-      color: #666;
+      border-top: 1px solid #333;
+      color: #888;
       font-size: 13px;
     }
 
@@ -376,10 +465,8 @@
       }
 
       header,
-      .hero,
-      .info,
-      .cards,
-      .cta-banner,
+      .section,
+      .cta,
       .steps,
       footer {
         padding: 40px 20px;
@@ -391,7 +478,10 @@
 
   <!-- HEADER -->
   <header>
-    <img src="WESTCLIFF.jpeg" alt="Westcliff University">
+    <a href="#" class="logo">
+      <img src="WESTCLIFF.jpeg" alt="Westcliff University">
+      <span class="logo-text">WESTCLIFF <span>UNIVERSITY</span></span>
+    </a>
     <ul class="menu">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#programa">Programa</a></li>
@@ -404,8 +494,8 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero-content">
-      <h1>Domina el Inglés<br>Transforma tu Futuro</h1>
-      <p>Programa ESL diseñado para estudiantes internacionales que buscan alcanzar nuevas oportunidades en Estados Unidos</p>
+      <h1>Domina el Inglés<br><span>Transforma tu Futuro</span></h1>
+      <p>Programa ESL certificado diseñado para estudiantes internacionales que buscan alcanzar sus metas académicas y profesionales en Estados Unidos</p>
       <a href="https://form.jotform.com/253206373598868" target="_blank" class="hero-btn">Comenzar Ahora</a>
     </div>
   </section>
@@ -427,77 +517,85 @@
   </section>
 
   <!-- INFO -->
-  <section class="info" id="programa">
+  <section class="section" id="programa">
     <h2>¿Qué es el Programa ESL?</h2>
     <p>El programa de Inglés como Segunda Lengua (ESL) está diseñado para estudiantes cuyo idioma nativo no es el inglés. Nuestro objetivo es desarrollar las habilidades lingüísticas necesarias para alcanzar el éxito académico y profesional en Estados Unidos.</p>
-    <p>En Westcliff University, ofrecemos un programa integral con profesores certificados, material didáctico de primer nivel y apoyo continuo para garantizar tu éxito.</p>
   </section>
 
   <!-- CARDS -->
-  <section class="cards">
-    <div class="card">
-      <h3>Certificación Acreditada</h3>
-      <p>Obtén un certificado ESL reconocido internacionalmente que abrirá puertas en universidades y empresas de todo el mundo.</p>
-      <ul>
-        <li>Acreditación ACCET</li>
-        <li>Profesores Certificados</li>
-        <li>Material Incluido</li>
-      </ul>
-    </div>
+  <section class="section">
+    <h2>Beneficios del Programa</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <h3>Certificación Acreditada</h3>
+        <p>Obtén un certificado ESL reconocido internacionalmente</p>
+        <ul>
+          <li>Acreditación ACCET</li>
+          <li>Profesores Certificados</li>
+          <li>Material Incluido</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Visa F-1 de Estudiante</h3>
-      <p>Asistencia completa con el proceso de visa de estudiante, incluyendo documentación I-20 y preparación para la entrevista consular.</p>
-      <ul>
-        <li>Documentos I-20</li>
-        <li>Asesoría Personalizada</li>
-        <li>100% de Aprobación</li>
-      </ul>
-    </div>
+      <div class="card">
+        <div class="card-icon">✈️</div>
+        <h3>Visa F-1 de Estudiante</h3>
+        <p>Asistencia completa con el proceso de visa</p>
+        <ul>
+          <li>Documentos I-20</li>
+          <li>Asesoría Personalizada</li>
+          <li>100% de Aprobación</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Permiso de Trabajo</h3>
-      <p>Obtén autorización para trabajar durante tus estudios y después de graduarte a través del programa OPT.</p>
-      <ul>
-        <li>Trabajo en Campus</li>
-        <li>Programa OPT</li>
-        <li>Experiencia Profesional</li>
-      </ul>
-    </div>
+      <div class="card">
+        <div class="card-icon">💼</div>
+        <h3>Permiso de Trabajo</h3>
+        <p>Autorización para trabajar durante y después</p>
+        <ul>
+          <li>Trabajo en Campus</li>
+          <li>Programa OPT</li>
+          <li>Experiencia Profesional</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Alojamiento Seguro</h3>
-      <p>Te ayudamos a encontrar opciones de vivienda cerca del campus en áreas seguras y convenientes.</p>
-      <ul>
-        <li>Múltiples Opciones</li>
-        <li>Áreas Seguras</li>
-        <li>Precios Accesibles</li>
-      </ul>
-    </div>
+      <div class="card">
+        <div class="card-icon">🏠</div>
+        <h3>Alojamiento Seguro</h3>
+        <p>Opciones de vivienda cerca del campus</p>
+        <ul>
+          <li>Múltiples Opciones</li>
+          <li>Áreas Seguras</li>
+          <li>Precios Accesibles</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Acceso Universitario</h3>
-      <p>Transición directa a programas de pregrado y posgrado en universidades acreditadas de Estados Unidos.</p>
-      <ul>
-        <li>Convenios Universitarios</li>
-        <li>Programas de Grado</li>
-        <li>Maestrías Disponibles</li>
-      </ul>
-    </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Acceso Universitario</h3>
+        <p>Transición a programas universitarios</p>
+        <ul>
+          <li>Convenios Universitarios</li>
+          <li>Programas de Grado</li>
+          <li>Maestrías Disponibles</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Soporte Continuo</h3>
-      <p>Equipo bilingüe disponible para brindarte apoyo académico y personal durante toda tu estadía.</p>
-      <ul>
-        <li>Asesores Bilingües</li>
-        <li>Disponibilidad 24/7</li>
-        <li>Orientación Académica</li>
-      </ul>
+      <div class="card">
+        <div class="card-icon">🌟</div>
+        <h3>Soporte Continuo</h3>
+        <p>Apoyo académico y personal 24/7</p>
+        <ul>
+          <li>Asesores Bilingües</li>
+          <li>Disponibilidad 24/7</li>
+          <li>Orientación Académica</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
+  <!-- CTA -->
+  <section class="cta">
     <h2>¿Listo para Comenzar?</h2>
     <p>Únete a cientos de estudiantes internacionales que ya están cumpliendo su sueño americano</p>
     <a href="https://form.jotform.com/253206373598868" target="_blank" class="cta-btn">Aplicar al Programa</a>
@@ -510,25 +608,25 @@
       <div class="step">
         <div class="step-num">1</div>
         <h3>Aplicación</h3>
-        <p>Completa el formulario online con tus datos personales y académicos</p>
+        <p>Completa el formulario online con tus datos</p>
       </div>
 
       <div class="step">
         <div class="step-num">2</div>
         <h3>Pago</h3>
-        <p>Realiza el pago de $95 USD para procesar tu aplicación</p>
+        <p>Realiza el pago de $95 USD</p>
       </div>
 
       <div class="step">
         <div class="step-num">3</div>
         <h3>Documentos</h3>
-        <p>Recibe tu I-20 y toda la documentación para tu visa F-1</p>
+        <p>Recibe tu I-20 y documentación</p>
       </div>
 
       <div class="step">
         <div class="step-num">4</div>
         <h3>Viaje</h3>
-        <p>Prepara tu viaje y comienza tu programa ESL</p>
+        <p>Comienza tu programa ESL</p>
       </div>
     </div>
   </section>
@@ -536,9 +634,12 @@
   <!-- FOOTER -->
   <footer id="contacto">
     <div class="footer-grid">
-      <div class="footer-logo">
-        <img src="WESTCLIFF.jpeg" alt="Westcliff University">
-        <p>Westcliff University se dedica a proporcionar educación de calidad en inglés, preparando a estudiantes internacionales para el éxito académico y profesional.</p>
+      <div class="footer-brand">
+        <h3>
+          <img src="WESTCLIFF.jpeg" alt="Westcliff University">
+          WESTCLIFF <span>UNIVERSITY</span>
+        </h3>
+        <p>Westcliff University se dedica a proporcionar educación de calidad en inglés, preparando a estudiantes internacionales para el éxito académico y profesional en Estados Unidos.</p>
       </div>
 
       <div class="footer-col">
@@ -546,14 +647,13 @@
         <a href="#inicio">Inicio</a>
         <a href="#programa">Programa</a>
         <a href="#proceso">Proceso</a>
-        <a href="https://form.jotform.com/253206373598868" target="_blank">Aplicar</a>
       </div>
 
       <div class="footer-col">
         <h4>Recursos</h4>
+        <a href="https://form.jotform.com/253206373598868" target="_blank">Aplicar Ahora</a>
         <a href="#programa">Beneficios</a>
         <a href="#proceso">Admisión</a>
-        <a href="#contacto">Contacto</a>
       </div>
 
       <div class="footer-col">
