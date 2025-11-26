@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westcliff University - Programa ESL</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  background: #1e3765;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3765, #2d4a7c);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #5ba4d0;
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn:hover {
+  background: #4a93bf;
+}
+
+.stats {
+  background: #f5f5f5;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat {
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat h3 {
+  color: #1e3765;
+  font-size: 50px;
+  margin: 0;
+}
+
+.stat p {
+  color: #5ba4d0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  text-align: center;
+  color: #1e3765;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-top: 4px solid #5ba4d0;
+}
+
+.card h3 {
+  color: #1e3765;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.card li:before {
+  content: "✓ ";
+  color: #5ba4d0;
+  font-weight: bold;
+}
+
+.cta {
+  background: #1e3765;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.process {
+  background: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+.step {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #1e3765;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.step h3 {
+  color: #1e3765;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #666;
+  font-size: 14px;
+}
+
+footer {
+  background: #1e3765;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  color: #5ba4d0;
+  margin-bottom: 15px;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 30px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+  .stats-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>WESTCLIFF UNIVERSITY</h1>
+  <p>Programa ESL - English as a Second Language</p>
+</header>
+
+<section class="hero">
+  <h2>Domina el Inglés, Transforma tu Futuro</h2>
+  <p>Programa certificado para estudiantes internacionales</p>
+  <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn">APLICAR AHORA</a>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div class="stat">
+      <h3>100%</h3>
+      <p>APROBACIÓN DE VISA</p>
+    </div>
+    <div class="stat">
+      <h3>6</h3>
+      <p>MESES DE DURACIÓN</p>
+    </div>
+    <div class="stat">
+      <h3>$95</h3>
+      <p>TARIFA DE APLICACIÓN</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>¿Qué es el Programa ESL?</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+    El programa de Inglés como Segunda Lengua (ESL) está diseñado para estudiantes cuyo idioma nativo no es el inglés. Nuestro objetivo es desarrollar las habilidades necesarias para el éxito académico y profesional en Estados Unidos.
+  </p>
+</section>
+
+<section class="section" style="background: #f5f5f5;">
+  <h2>Beneficios del Programa</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📚 Certificación Acreditada</h3>
+      <p>Certificado ESL reconocido internacionalmente</p>
+      <ul>
+        <li>Acreditación ACCET</li>
+        <li>Profesores Certificados</li>
+        <li>Material Incluido</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>✈️ Visa F-1</h3>
+      <p>Asistencia completa con visa de estudiante</p>
+      <ul>
+        <li>Documentos I-20</li>
+        <li>Asesoría Personalizada</li>
+        <li>100% de Aprobación</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💼 Permiso de Trabajo</h3>
+      <p>Autorización para trabajar</p>
+      <ul>
+        <li>Trabajo en Campus</li>
+        <li>Programa OPT</li>
+        <li>Experiencia Profesional</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🏠 Alojamiento</h3>
+      <p>Opciones de vivienda seguras</p>
+      <ul>
+        <li>Múltiples Opciones</li>
+        <li>Áreas Seguras</li>
+        <li>Precios Accesibles</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Acceso Universitario</h3>
+      <p>Transición a programas universitarios</p>
+      <ul>
+        <li>Convenios Universitarios</li>
+        <li>Programas de Grado</li>
+        <li>Maestrías</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🌟 Soporte 24/7</h3>
+      <p>Apoyo continuo académico y personal</p>
+      <ul>
+        <li>Asesores Bilingües</li>
+        <li>Disponibilidad 24/7</li>
+        <li>Orientación Académica</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>¿Listo para Comenzar?</h2>
+  <p>Únete a estudiantes de todo el mundo que están cumpliendo su sueño americano</p>
+  <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn">APLICAR AL PROGRAMA</a>
+</section>
+
+<section class="process">
+  <div class="section">
+    <h2>Proceso en 4 Pasos</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Aplicación</h3>
+        <p>Completa el formulario online</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Pago</h3>
+        <p>Realiza el pago de $95 USD</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Documentos</h3>
+        <p>Recibe tu I-20</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Viaje</h3>
+        <p>Comienza tu programa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4>WESTCLIFF UNIVERSITY</h4>
+      <p style="color: #ccc;">Educación de calidad para estudiantes internacionales</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <a href="#inicio">Inicio</a>
+      <a href="#programa">Programa</a>
+      <a href="#beneficios">Beneficios</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <a href="https://form.jotform.com/253206373598868" target="_blank">Aplicar</a>
+      <a href="#info">Información</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="mailto:westcliffuniversity@gmail.com">westcliffuniversity@gmail.com</a>
+      <a href="tel:+17862715524">+1 (786) 271-5524</a>
+      <a>Irvine, California, USA</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Westcliff University - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+</html>
