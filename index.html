@@ -1,434 +1,598 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Westcliff University - Programa ESL</title>
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-header {
-  background: #1e3765;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.hero {
-  background: linear-gradient(135deg, #1e3765, #2d4a7c);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  background: #5ba4d0;
-  color: white;
-  padding: 15px 40px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 10px;
-}
-
-.btn:hover {
-  background: #4a93bf;
-}
-
-.stats {
-  background: #f5f5f5;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.stats-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.stat {
-  flex: 1;
-  min-width: 200px;
-}
-
-.stat h3 {
-  color: #1e3765;
-  font-size: 50px;
-  margin: 0;
-}
-
-.stat p {
-  color: #5ba4d0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section h2 {
-  text-align: center;
-  color: #1e3765;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-top: 4px solid #5ba4d0;
-}
-
-.card h3 {
-  color: #1e3765;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.card li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.card li:before {
-  content: "✓ ";
-  color: #5ba4d0;
-  font-weight: bold;
-}
-
-.cta {
-  background: #1e3765;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.cta p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.process {
-  background: #f5f5f5;
-  padding: 60px 20px;
-}
-
-.steps {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 30px auto 0;
-}
-
-.step {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-  flex: 1;
-  min-width: 200px;
-  max-width: 250px;
-}
-
-.step-number {
-  width: 60px;
-  height: 60px;
-  background: #1e3765;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0 auto 20px;
-}
-
-.step h3 {
-  color: #1e3765;
-  margin-bottom: 10px;
-}
-
-.step p {
-  color: #666;
-  font-size: 14px;
-}
-
-footer {
-  background: #1e3765;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-.footer-col h4 {
-  color: #5ba4d0;
-  margin-bottom: 15px;
-}
-
-.footer-col a {
-  color: #ccc;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.footer-col a:hover {
-  color: white;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  margin-top: 30px;
-  color: #999;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 28px;
-  }
-  .stats-container {
-    flex-direction: column;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westcliff University - Programa ESL</title>
+    <link rel="icon" type="image/jpeg" href="WESTCLIFF.jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: #f0f4f8;
+        }
+        
+        /* Landing centrado */
+        .landing {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: 
+                linear-gradient(to bottom, rgba(240, 244, 248, 0.95) 0%, rgba(226, 232, 240, 0.9) 100%),
+                url('bandera.jpg') center/cover no-repeat fixed;
+            position: relative;
+            padding: 2rem;
+        }
+        
+        .landing-content {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 120px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #1e3765;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out 0.5s both;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+        }
+        
+        .btn-start {
+            background: #1e3765;
+            color: white;
+            padding: 1.5rem 4rem;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 8px 25px rgba(30, 55, 101, 0.3);
+            animation: fadeIn 1s ease-out 0.7s both, pulse 2s infinite;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .btn-start:hover {
+            transform: translateY(-5px) scale(1.08);
+            box-shadow: 0 15px 40px rgba(30, 55, 101, 0.5);
+            background: #2c4a7c;
+        }
+        
+        /* Contenido principal */
+        .main-content {
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(30, 55, 101, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+            background: white;
+            padding: 0.3rem;
+            border-radius: 8px;
+        }
+        
+        .nav-logo span {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .btn-nav {
+            background: #1e3765;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            border: 2px solid white;
+            font-weight: 600;
+        }
+        
+        .btn-nav:hover {
+            transform: scale(1.05);
+            background: white;
+            color: #1e3765;
+        }
+        
+        /* Secciones */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        
+        .section h2 {
+            text-align: center;
+            color: #1e3765;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #1e3765;
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #1e3765;
+            transition: all 0.4s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(30, 55, 101, 0.2);
+        }
+        
+        .card h3 {
+            color: #1e3765;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Banner CTA */
+        .cta-banner {
+            background: linear-gradient(135deg, #1e3765 0%, #2c4a7c 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .cta-banner h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .btn-cta {
+            background: white;
+            color: #1e3765;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.4s;
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(255,255,255,0.5);
+        }
+        
+        /* Pasos */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            background: #1e3765;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem auto;
+            box-shadow: 0 8px 20px rgba(30, 55, 101, 0.3);
+            transition: all 0.4s;
+        }
+        
+        .step:hover .step-number {
+            transform: scale(1.15);
+        }
+        
+        .step h3 {
+            color: #1e3765;
+            margin-bottom: 1rem;
+        }
+        
+        /* Testimonios */
+        .testimonials {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 2rem auto;
+            max-width: 800px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: #1e3765;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            color: #1e3765;
+            font-weight: bold;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #1e3765;
+        }
+        
+        .faq-question {
+            background: #f8fafc;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: #1e3765;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #e2e8f0;
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e3765;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer img {
+            height: 70px;
+            width: auto;
+            margin-bottom: 1.5rem;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+        
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .btn-start {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .nav-logo span {
+                display: none;
+            }
+            
+            .section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header>
-  <h1>WESTCLIFF UNIVERSITY</h1>
-  <p>Programa ESL - English as a Second Language</p>
-</header>
-
-<section class="hero">
-  <h2>Domina el Inglés, Transforma tu Futuro</h2>
-  <p>Programa certificado para estudiantes internacionales</p>
-  <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn">APLICAR AHORA</a>
-</section>
-
-<section class="stats">
-  <div class="stats-container">
-    <div class="stat">
-      <h3>100%</h3>
-      <p>APROBACIÓN DE VISA</p>
-    </div>
-    <div class="stat">
-      <h3>6</h3>
-      <p>MESES DE DURACIÓN</p>
-    </div>
-    <div class="stat">
-      <h3>$95</h3>
-      <p>TARIFA DE APLICACIÓN</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>¿Qué es el Programa ESL?</h2>
-  <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
-    El programa de Inglés como Segunda Lengua (ESL) está diseñado para estudiantes cuyo idioma nativo no es el inglés. Nuestro objetivo es desarrollar las habilidades necesarias para el éxito académico y profesional en Estados Unidos.
-  </p>
-</section>
-
-<section class="section" style="background: #f5f5f5;">
-  <h2>Beneficios del Programa</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>📚 Certificación Acreditada</h3>
-      <p>Certificado ESL reconocido internacionalmente</p>
-      <ul>
-        <li>Acreditación ACCET</li>
-        <li>Profesores Certificados</li>
-        <li>Material Incluido</li>
-      </ul>
+    <!-- Landing Page -->
+    <div class="landing" id="landing">
+        <div class="landing-content">
+            <div class="logo-container">
+                <img src="WESTCLIFF.jpeg" alt="Westcliff University">
+            </div>
+            <h1>Westcliff University</h1>
+            <a href="#main" class="btn-start" onclick="scrollToMain()">Empezar</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>✈️ Visa F-1</h3>
-      <p>Asistencia completa con visa de estudiante</p>
-      <ul>
-        <li>Documentos I-20</li>
-        <li>Asesoría Personalizada</li>
-        <li>100% de Aprobación</li>
-      </ul>
+    <!-- Contenido Principal -->
+    <div class="main-content" id="main">
+        <header>
+            <nav>
+                <div class="nav-logo">
+                    <img src="WESTCLIFF.jpeg" alt="Westcliff University Logo">
+                    <span>WESTCLIFF UNIVERSITY</span>
+                </div>
+                <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn-nav">Aplicar Ahora</a>
+            </nav>
+        </header>
+
+        <section class="section">
+            <h2>Programa ESL en Estados Unidos</h2>
+            <p class="subtitle">Educate. Inspire. Empower.</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem;">
+                Nuestro programa de inglés como segundo idioma (ESL) está diseñado para estudiantes internacionales 
+                que desean mejorar sus habilidades en inglés mientras experimentan la vida en Estados Unidos.
+            </p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>🎓 Visa F-1 de Estudiante</h3>
+                    <p>Obtén tu visa de estudiante para vivir legalmente en Estados Unidos mientras estudias. Te guiamos en todo el proceso de solicitud y documentación necesaria.</p>
+                </div>
+                <div class="card">
+                    <h3>🏠 Alojamiento Cerca del Campus</h3>
+                    <p>Opciones de vivienda seguras y cómodas disponibles cerca del campus en Irvine, California. Ambiente estudiantil y transporte accesible.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 Oportunidades de Carrera</h3>
+                    <p>Acceso directo a programas de grado (Bachelor, Master, MBA) después de completar el ESL. Preparación para el mundo profesional.</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍🏫 Profesores Expertos</h3>
+                    <p>Instructores certificados con más de 10 años de experiencia en enseñanza internacional. Metodología moderna y efectiva.</p>
+                </div>
+                <div class="card">
+                    <h3>🌎 Ambiente Multicultural</h3>
+                    <p>Conoce estudiantes de más de 50 países diferentes y expande tu red global. Eventos culturales y actividades semanales.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Recursos de Primera</h3>
+                    <p>Biblioteca moderna, laboratorios de computación, materiales digitales incluidos. Acceso a plataformas online 24/7.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>¿Listo para Comenzar Tu Aventura? 🚀</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem;">Aplica ahora y asegura tu lugar en nuestro próximo programa</p>
+            <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn-cta">Aplicar al Programa</a>
+        </div>
+
+        <section class="section">
+            <h2>Proceso de Aplicación</h2>
+            <p class="subtitle">4 pasos sencillos para comenzar</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Completa la Aplicación</h3>
+                    <p>Llena el formulario en línea con tu información personal, académica y datos de contacto. Solo toma 10 minutos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Documentos Requeridos</h3>
+                    <p>Envía tu pasaporte vigente, comprobante de fondos económicos y certificados académicos traducidos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Proceso de Visa F-1</h3>
+                    <p>Te ayudamos con el formulario I-20, SEVIS y la solicitud de visa F-1. Asesoría completa incluida.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>¡Bienvenido a USA!</h3>
+                    <p>Llega a California y comienza tu programa ESL. Te recibimos en el aeropuerto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; color: #1e3765; margin-bottom: 3rem; font-size: 2.5rem;">Lo Que Dicen Nuestros Estudiantes</h2>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Westcliff cambió mi vida. Llegué sin saber inglés y ahora trabajo en una empresa tecnológica en Silicon Valley. Los profesores son increíbles y el ambiente es muy familiar."
+                    </p>
+                    <p class="testimonial-author">- María González, México 🇲🇽</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "El programa ESL me preparó perfectamente para mi Master en Business. La ubicación en California es ideal y conocí amigos de todo el mundo."
+                    </p>
+                    <p class="testimonial-author">- Carlos Silva, Brasil 🇧🇷</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Preguntas Frecuentes</h2>
+            <p class="subtitle">Resuelve tus dudas sobre el programa</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">💰 ¿Cuánto cuesta el programa?</div>
+                    <div class="faq-answer">
+                        El programa completo de 24 semanas tiene un costo de $4,500 USD. Esto incluye matrícula, materiales y acceso a todas las instalaciones.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">📅 ¿Cuándo puedo empezar?</div>
+                    <div class="faq-answer">
+                        Tenemos inicios cada 8 semanas. Las próximas fechas son: Enero, Marzo, Mayo, Julio, Septiembre y Noviembre.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">🏠 ¿Ofrecen ayuda con el alojamiento?</div>
+                    <div class="faq-answer">
+                        Sí, tenemos convenios con residencias estudiantiles cerca del campus. Los costos van desde $800 a $1,200 USD mensuales.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">✈️ ¿Necesito nivel de inglés para aplicar?</div>
+                    <div class="faq-answer">
+                        No, aceptamos estudiantes de todos los niveles desde principiante hasta avanzado.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img src="WESTCLIFF.jpeg" alt="Westcliff University Logo">
+            <h3>WESTCLIFF UNIVERSITY</h3>
+            <p style="margin: 1rem 0; font-style: italic; color: #93c5fd;">Educate. Inspire. Empower.</p>
+            <p style="margin: 1rem 0;">📍 Irvine, California, USA</p>
+            <p>📧 Email: <a href="mailto:westcliffuniversity@gmail.com">westcliffuniversity@gmail.com</a></p>
+            <p>📱 Teléfono: <a href="tel:+17862715524">+1 (786) 271-5524</a></p>
+            <p style="margin-top: 2rem; color: #93c5fd;">&copy; 2024 Westcliff University. Todos los derechos reservados.</p>
+        </footer>
     </div>
 
-    <div class="card">
-      <h3>💼 Permiso de Trabajo</h3>
-      <p>Autorización para trabajar</p>
-      <ul>
-        <li>Trabajo en Campus</li>
-        <li>Programa OPT</li>
-        <li>Experiencia Profesional</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🏠 Alojamiento</h3>
-      <p>Opciones de vivienda seguras</p>
-      <ul>
-        <li>Múltiples Opciones</li>
-        <li>Áreas Seguras</li>
-        <li>Precios Accesibles</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🎓 Acceso Universitario</h3>
-      <p>Transición a programas universitarios</p>
-      <ul>
-        <li>Convenios Universitarios</li>
-        <li>Programas de Grado</li>
-        <li>Maestrías</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🌟 Soporte 24/7</h3>
-      <p>Apoyo continuo académico y personal</p>
-      <ul>
-        <li>Asesores Bilingües</li>
-        <li>Disponibilidad 24/7</li>
-        <li>Orientación Académica</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>¿Listo para Comenzar?</h2>
-  <p>Únete a estudiantes de todo el mundo que están cumpliendo su sueño americano</p>
-  <a href="https://form.jotform.com/253206373598868" target="_blank" class="btn">APLICAR AL PROGRAMA</a>
-</section>
-
-<section class="process">
-  <div class="section">
-    <h2>Proceso en 4 Pasos</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Aplicación</h3>
-        <p>Completa el formulario online</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Pago</h3>
-        <p>Realiza el pago de $95 USD</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Documentos</h3>
-        <p>Recibe tu I-20</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">4</div>
-        <h3>Viaje</h3>
-        <p>Comienza tu programa</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-col">
-      <h4>WESTCLIFF UNIVERSITY</h4>
-      <p style="color: #ccc;">Educación de calidad para estudiantes internacionales</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Enlaces</h4>
-      <a href="#inicio">Inicio</a>
-      <a href="#programa">Programa</a>
-      <a href="#beneficios">Beneficios</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Recursos</h4>
-      <a href="https://form.jotform.com/253206373598868" target="_blank">Aplicar</a>
-      <a href="#info">Información</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <a href="mailto:westcliffuniversity@gmail.com">westcliffuniversity@gmail.com</a>
-      <a href="tel:+17862715524">+1 (786) 271-5524</a>
-      <a>Irvine, California, USA</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Westcliff University - Todos los derechos reservados</p>
-  </div>
-</footer>
-
+    <script>
+        function scrollToMain() {
+            document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
